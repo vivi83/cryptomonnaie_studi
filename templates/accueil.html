@@ -1,0 +1,14 @@
+{% extends 'templates.html' %}
+
+{% block content %}
+
+<div class="card" >
+  <ul class="list-group list-group-flush">
+    {% for obj in results %}
+    <li class="list-group-item">{{obj.symbol}} {{obj.name}} {{obj.quote.USD.price}}</li>
+
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
